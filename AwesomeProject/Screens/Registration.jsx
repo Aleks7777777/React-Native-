@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TextInput, StyleSheet, Pressable } from 'react-native';
+import {
+	View,
+	Text,
+	Image,
+	TextInput,
+	StyleSheet,
+	Pressable,
+} from 'react-native';
 
 const RegistrationScreen = () => {
 	const [passwordView, usePasswordView] = useState(true)
@@ -10,7 +17,7 @@ const RegistrationScreen = () => {
 	return (
 		<View style={styles.conteiner}>
 			<Text style={styles.title}>Реєстрація</Text>
-			{/* <Image style={styles.avatar} source={require('./')}></Image> */}
+			<Image style={styles.avatar} source={require('./../img/avatar.jpg')}></Image>
 
 			<TextInput
 				style={styles.input}
@@ -43,6 +50,8 @@ const RegistrationScreen = () => {
 const styles = StyleSheet.create({
 	conteiner: {
 		position: "relative",
+		width: 120,
+		height: 120,
 	}
 })
 export default RegistrationScreen;
