@@ -8,7 +8,7 @@ import {
 	Pressable,
 } from 'react-native';
 
-const RegistrationScreen = () => {
+export const RegistrationScreen = () => {
 	const [passwordView, usePasswordView] = useState(true)
 	const handlerLongClick = () => {
 		!usePasswordView(!passwordView)
@@ -16,8 +16,8 @@ const RegistrationScreen = () => {
 	}
 	return (
 		<View style={styles.conteiner}>
-			<Text style={styles.title}>Реєстрація</Text>
-			<Image style={styles.avatar} source={require('./../img/avatar.jpg')}></Image>
+			<Text style={{ color: '#333' }}>Реєстрація</Text>
+			<Image style={styles.avatar} source={require('../img/avatar.jpg')} />
 
 			<TextInput
 				style={styles.input}
@@ -42,7 +42,7 @@ const RegistrationScreen = () => {
 				<Text style={styles.textButton}>Зареєструватися</Text>
 			</Pressable>
 			<Text style={styles.link} dataDetectorType="link">Вже є акаунт? Увійти</Text>
-		</View>
+		</View >
 	);
 };
 
@@ -50,8 +50,8 @@ const RegistrationScreen = () => {
 const styles = StyleSheet.create({
 	conteiner: {
 		position: "relative",
-		width: 120,
-		height: 120,
+	},
+	input: {
+
 	}
 })
-export default RegistrationScreen;
